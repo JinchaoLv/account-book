@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lvjc.dao.UserDao">
+    <insert id="addEntity">
+        INSERT INTO t_user
+        VALUES (#{entity.id}, #{entity.username}, #{entity.password}, #{entity.sex}, #{entity.age}, #{entity.phone}, #{entity.email}, #{entity.icon, jdbcType=BLOB},
+        #{entity.signature}, #{entity.tableInfo}, #{entity.state})
+    </insert>
+    <delete id="deleteEntity">
+        DELETE FROM t_user
+        WHERE user_id = #{entity.id}
+    </delete>
+    <delete id="deleteEntityById">
+        DELETE FROM t_user
+        WHERE user_id = #{id}
+    </delete>
+    <update id="updateEntity">
+        UPDATE t_user
+        SET user_name = #{entity.username}, user_password = #{entity.password}, user_sex = #{entity.sex}, user_age = #{entity.age},
+        user_phone = #{entity.phone}, user_email = #{entity.email},
+        user_icon = #{entity.icon}, user_signature = #{entity.signature}, user_tableInfo = #{entity.tableInfo},
+        user_state = #{entity.state}
+        WHERE user_id = #{entity.id}
+    </update>
+    <update id="updateStateById">
+        UPDATE t_user
+        SET user_state = #{state}
+        WHERE user_id = #{id}
+    </update>
+    <select id="getEntityById" resultType="DetailUser">
+        SELECT
+        user_id id,
+        user_name username,
+        user_password password,
+        user_sex sex,
+        user_age age,
+        user_phone phone,
+        user_email email,
+        user_signature signature,
+        user_tableInfo tableInfo,
+        user_state state
+        FROM t_user
+        WHERE user_id = #{id}
+    </select>
+    <select id="getDetailUserByName" resultType="DetailUser">
+        SELECT
+        user_id id,
+        user_name username,
+        user_password password,
+        user_sex sex,
+        user_age age,
+        user_phone phone,
+        user_email email,
+        user_signature signature,
+        user_tableInfo tableInfo,
+        user_state state
+        FROM t_user
+        WHERE user_name = #{username}
+    </select>
+    <select id="getAllEntities" resultType="DetailUser">
+        SELECT
+        user_id id,
+        user_name username,
+        user_password password,
+        user_sex sex,
+        user_age age,
+        user_phone phone,
+        user_email email,
+        user_signature signature,
+        user_tableInfo tableInfo,
+        user_state state
+        FROM t_user
+    </select>
+    <select id="getAllUsers" resultType="User">
+        SELECT
+        user_id id,
+        user_name username,
+        user_sex sex,
+        user_age age,
+        user_phone phone,
+        user_email email,
+        user_state state
+        FROM t_user
+    </select>
+</mapper>

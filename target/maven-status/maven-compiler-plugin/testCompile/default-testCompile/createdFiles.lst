@@ -1,0 +1,7 @@
+com\lvjc\dao\AdminDaoTest.class
+com\lvjc\AccountBookApplicationTests.class
+com\lvjc\service\AdminServiceTest.class
+com\lvjc\support\incrementer\ClassIdGeneratorTest.class
+com\lvjc\dao\TransactionDaoTest.class
+com\lvjc\dao\TableInfoDaoTest.class
+com\lvjc\dao\UserDaoTest.class

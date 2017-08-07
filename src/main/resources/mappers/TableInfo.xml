@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lvjc.dao.TableInfoDao">
+    <update id="createTable">
+    CREATE TABLE ${targetTable}
+    (
+    table_info_tableName VARCHAR (255)
+    )
+    </update>
+    <insert id="addEntity">
+        INSERT INTO ${targetTable}
+        VALUES (#{entity.tableName})
+    </insert>
+    <delete id="deleteEntity">
+        DELETE FROM ${targetTable}
+        WHERE table_info_tableName = #{entity.tableName}
+    </delete>
+    <select id="getAllEntities" resultType="TableInfo">
+        SELECT
+        table_info_tableName tableName
+        FROM ${targetTable}
+    </select>
+</mapper>

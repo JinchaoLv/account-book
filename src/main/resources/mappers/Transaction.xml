@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lvjc.dao.TransactionDao">
+    <update id="createTable">
+        CREATE TABLE ${targetTable}
+        (
+        tx_id VARCHAR (255) PRIMARY KEY ,
+        tx_date DATE ,
+        tx_modeId VARCHAR (255),
+        tx_amount DECIMAL (8,2),
+        tx_fieldId VARCHAR (255),
+        tx_introduction VARCHAR (255),
+        tx_detail TEXT,
+        tx_secret VARCHAR (255)
+        )
+    </update>
+    <insert id="addEntity">
+        INSERT INTO ${targetTable}
+        VALUES (#{entity.id}, #{entity.date}, #{entity.modeId}, #{entity.amount}, #{entity.fieldId},
+        #{entity.introduction}, #{entity.detail}, #{entity.secret})
+    </insert>
+    <update id="updateEntity">
+        UPDATE ${targetTable}
+        SET tx_date = #{entity.date}, tx_modeId = #{entity.modeId}, tx_amount = #{entity.amount},
+        tx_fieldId = #{entity.fieldId}, tx_introduction = #{entity.introduction}, tx_detail = #{entity.detail}, tx_secret = #{entity.secret}
+        WHERE tx_id = #{entity.id}
+    </update>
+    <delete id="deleteEntity">
+        DELETE FROM ${targetTable}
+        WHERE tx_id = #{entity.id}
+    </delete>
+    <delete id="deleteEntityById">
+        DELETE FROM ${targetTable}
+        WHERE tx_id = #{id}
+    </delete>
+    <select id="getEntityById" resultType="Transaction">
+        SELECT
+        tx_id id,
+        tx_date date,
+        tx_modeId modeId,
+        tx_amount amount,
+        tx_fieldId fieldId,
+        tx_introduction introduction,
+        tx_secret secret
+        FROM ${targetTable}
+        WHERE tx_id = #{id}
+    </select>
+    <select id="getAllEntities" resultType="Transaction">
+        SELECT
+        tx_id id,
+        tx_date date,
+        tx_modeId modeId,
+        tx_amount amount,
+        tx_fieldId fieldId,
+        tx_introduction introduction,
+        tx_secret secret
+        FROM ${targetTable}
+    </select>
+    <select id="getTransactionsByYear" resultType="Transaction">
+        SELECT
+        tx_id id,
+        tx_date date,
+        tx_modeId modeId,
+        tx_amount amount,
+        tx_fieldId fieldId,
+        tx_introduction introduction,
+        tx_secret secret
+        FROM ${targetTable}
+    </select>
+    <select id="getTransactionsByMonth" resultType="Transaction">
+        SELECT
+        tx_id id,
+        tx_date date,
+        tx_modeId modeId,
+        tx_amount amount,
+        tx_fieldId fieldId,
+        tx_introduction introduction,
+        tx_secret secret
+        FROM ${targetTable}
+        WHERE date_format(tx_date, '%Y%m') = #{month}
+    </select>
+    <select id="getTransactionsByDay" resultType="Transaction">
+        SELECT
+        tx_id id,
+        tx_date date,
+        tx_modeId modeId,
+        tx_amount amount,
+        tx_fieldId fieldId,
+        tx_introduction introduction,
+        tx_secret secret
+        FROM ${targetTable}
+        WHERE date_format(tx_date, '%Y%m%d') = #{day}
+    </select>
+    <select id="getTransactionDetailById" resultType="Transaction">
+        SELECT
+        tx_detail detail,
+        tx_secret secret
+        FROM ${targetTable}
+        WHERE tx_id = #{id}
+    </select>
+</mapper>

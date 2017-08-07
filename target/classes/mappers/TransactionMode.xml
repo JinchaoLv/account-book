@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lvjc.dao.TransactionModeDao">
+    <update id="createTable">
+        CREATE TABLE ${targetTable}
+        (
+        tx_mode_id VARCHAR (255) PRIMARY KEY ,
+        tx_mode_name VARCHAR (255)
+        )
+    </update>
+    <insert id="addEntity">
+        INSERT INTO ${targetTable}
+        VALUES (#{entity.id}, #{entity.name})
+    </insert>
+    <update id="updateEntity">
+        UPDATE ${targetTable}
+        SET tx_mode_name = #{entity.name}
+        WHERE tx_mode_id = #{entity.id}
+    </update>
+    <delete id="deleteEntity">
+        DELETE FROM ${targetTable}
+        WHERE tx_mode_id = #{entity.id}
+    </delete>
+    <delete id="deleteEntityById">
+        DELETE FROM ${targetTable}
+        WHERE tx_mode_id = #{id}
+    </delete>
+    <select id="getEntityById" resultType="TransactionMode">
+        SELECT
+        tx_mode_id id,
+        tx_mode_name name
+        FROM ${targetTable}
+        WHERE tx_mode_id = #{id}
+    </select>
+    <select id="getAllEntities" resultType="TransactionMode">
+        SELECT
+        tx_mode_id id,
+        tx_mode_name name
+        FROM ${targetTable}
+    </select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mappers.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="lazyLoadingEnabled" value="false" />
+    </settings>
+    <typeAliases>
+        <typeAlias alias="TransactionField" type="com.lvjc.po.TransactionField" />
+        <typeAlias alias="TransactionMode" type="com.lvjc.po.TransactionMode" />
+        <typeAlias alias="DetailUser" type="com.lvjc.po.DetailUser" />
+        <typeAlias type="com.lvjc.po.User" alias="User"/>
+        <typeAlias alias="Transaction" type="com.lvjc.po.Transaction" />
+        <typeAlias type="com.lvjc.support.incrementer.impl.SequenceInfo" alias="SequenceInfo"/>
+        <typeAlias type="com.lvjc.po.TableInfo" alias="TableInfo"/>
+        <typeAlias type="com.lvjc.po.Admin" alias="Admin"/>
+    </typeAliases>
+</configuration>

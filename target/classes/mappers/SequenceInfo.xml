@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lvjc.dao.SequenceInfoDao">
+    <update id="createTable">
+        CREATE TABLE ${targetTable}
+        (
+        gen_sequenceId VARCHAR(255) PRIMARY KEY ,
+        gen_sequenceValue INT
+        )
+    </update>
+    <insert id="addEntity">
+        INSERT INTO ${targetTable}
+        VALUES (#{entity.sequenceId}, #{entity.sequenceValue})
+    </insert>
+    <update id="updateEntity">
+        UPDATE ${targetTable}
+        SET
+        gen_sequenceValue = #{entity.sequenceValue}
+        WHERE
+        gen_sequenceId = #{entity.sequenceId}
+    </update>
+    <delete id="deleteEntity">
+        DELETE FROM ${targetTable}
+        WHERE gen_sequenceId = #{entity.sequenceId}
+    </delete>
+    <delete id="deleteEntityById">
+        DELETE FROM ${targetTable}
+        WHERE gen_sequenceId = #{id};
+    </delete>
+    <select id="getEntityById" resultType="SequenceInfo">
+        SELECT
+        gen_sequenceId sequenceId,
+        gen_sequenceValue sequenceValue
+        FROM ${targetTable}
+        WHERE gen_sequenceId = #{id}
+    </select>
+</mapper>
