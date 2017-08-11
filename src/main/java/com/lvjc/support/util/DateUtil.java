@@ -49,6 +49,10 @@ public class DateUtil {
         return newStr.substring(0, 6);
     }
 
+    /**
+     * 获取当前日期的字符串格式
+     * @return
+     */
     public static String currentDate(){
         return dateToString(new Date());
     }
