@@ -61,6 +61,13 @@ public class DateUtil {
         return date == null ? null : new SimpleDateFormat(pattern).format(date);
     }
 
+    /**
+     * 日期字符串转换为Date类型
+     * @param dateString
+     * @return
+     * @throws ParseException
+     * @throws IncorrectDatePatternException
+     */
     public static Date stringToDate(String dateString) throws ParseException, IncorrectDatePatternException {
         DatePattern pattern = checkDatePattern(dateString);
         String newStr = deleteAllCharacterNotNum(dateString);
