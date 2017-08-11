@@ -14,6 +14,10 @@ import java.util.Date;
  */
 public class DateUtil {
 
+    /**
+     * Description:<br>
+     *     日期格式。
+     */
     public enum DatePattern{
 
         YEAR("yyyy"), MONTH("yyyyMM"), DAY("yyyyMMdd");
