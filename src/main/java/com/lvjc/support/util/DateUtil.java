@@ -8,6 +8,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * Description:<br>
+ *     工具类：用于<code>String</code>和<code>Date</code>类型对象的相互转换。
  * Created by lvjc on 2017/7/12.
  */
 public class DateUtil {
