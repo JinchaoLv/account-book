@@ -66,6 +66,12 @@ public class DateUtil {
         return FORMATTER_DAY.format(date);
     }
 
+    /**
+     *
+     * @param date
+     * @param pattern
+     * @return
+     */
     public static String dateToString(Date date, String pattern){
         return date == null ? null : new SimpleDateFormat(pattern).format(date);
     }
