@@ -57,6 +57,11 @@ public class DateUtil {
         return dateToString(new Date());
     }
 
+    /**
+     *
+     * @param date
+     * @return
+     */
     public static String dateToString(Date date){
         return FORMATTER_DAY.format(date);
     }
