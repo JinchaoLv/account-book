@@ -54,4 +54,9 @@ public class TableNameUtil {
         }
         return tableNames;
     }
+
+
+    public static void main(String[] args) {
+
+    }
 }
