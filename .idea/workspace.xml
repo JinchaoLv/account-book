@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad301be7-37c0-4ee4-813e-69bd03ae99b6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ad301be7-37c0-4ee4-813e-69bd03ae99b6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -141,22 +139,22 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1503453785193" expanded="true" signature="119473:119490" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119473:119508" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119473:119521" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119473:119536" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119571:120267" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119584:120252" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119619:119925" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119638:119910" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119712:119890" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119752:119856" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119773:119834" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119973:120238" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="119992:120223" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="120025:120203" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="120065:120169" ph="..." />
-                <marker date="1503453785193" expanded="true" signature="120086:120147" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119333:119350" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119333:119368" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119333:119381" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119333:119396" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119431:120127" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119444:120112" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119479:119785" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119498:119770" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119572:119750" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119612:119716" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119633:119694" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119833:120098" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119852:120083" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119885:120063" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119925:120029" ph="..." />
+                <marker date="1503462916207" expanded="true" signature="119946:120007" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1631,7 +1629,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562741000" />
+    <option name="totallyTimeSpent" value="562747000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1644,7 +1642,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
